@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hexo || 标签</title>
+    <title>Hexo || tags</title>
     <meta name="author" content="John Doe">
     <meta name="description" content=" ">
     <meta name="keywords" content=" ">
@@ -57,7 +57,7 @@
             <span>home</span>
         </a>
         
-        <a href="/archives">
+        <a href="/about">
             <span>
                 <a-icon type="idcard" theme="filled" />
             </span>
@@ -105,7 +105,7 @@
                 </div>
             </a>
             
-            <a href="/archives">
+            <a href="/about">
                 <div class="item">
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="idcard" theme="filled" />
@@ -150,35 +150,52 @@
 
                 <div id="main">
                      
-<link rel="stylesheet" href="/css/post-body.css">
-<div class="article">
-    <div>
-        <h1>标签 </h1>
-    </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2021/7/20
+<div class="categories-tags">
+    
+    <div class="all-s">
+        
+        
+        <span>
+            <a href="/tags/Testing/" style=background:#1bccbc>
+                <span class="icon">
+                    <a-icon type="tag" theme="filled" />
+                </span>
+                Testing
+            </a>
         </span>
-
         
-
+        
+        
+        <span>
+            <a href="/tags/Another-Tag/" style=background:#879cff>
+                <span class="icon">
+                    <a-icon type="tag" theme="filled" />
+                </span>
+                Another Tag
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/tags/myTag/" style=background:#879cff>
+                <span class="icon">
+                    <a-icon type="tag" theme="filled" />
+                </span>
+                myTag
+            </a>
+        </span>
+        
         
     </div>
-
-    <div class="content" v-pre>
+    <div id="archives">
         
     </div>
-
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <div id="comment">
-        <div id="gitalk-container">
-        </div>
-    </div>
-    
+    <script>
+        new Vue({
+            el: '#archives'
+        })
+    </script>
 </div>
                      
 <footer id="footer">

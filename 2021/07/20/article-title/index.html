@@ -173,12 +173,6 @@
     </div>
 
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <div id="comment">
-        <div id="gitalk-container">
-        </div>
-    </div>
-    
 </div>
                      
 <footer id="footer">
@@ -186,16 +180,10 @@
 
 		<div>
 			<span id="busuanzi_container_site_uv"> 
-				你是第 <span id="busuanzi_value_site_uv"></span> 个访问本站的小可爱
+				你是第 <span id="busuanzi_value_site_uv"></span> 个访问本站的小可爱哦       
+				&nbsp&nbsp&nbsp本站总访问量：<span id="busuanzi_value_page_pv"></span> 次
 			</span>
 		</div>
-
-		<div>
-			<span id="busuanzi_container_page_pv">
-				本站总访问量： <span id="busuanzi_value_page_pv"></span> 次
-			</span>
-		</div>
-
 
 		<div>
             @JasonH
@@ -258,21 +246,6 @@
             }
         }
     })
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script>
-    const gitalk = new Gitalk({
-        clientID: '',
-        clientSecret: '',
-        repo: 'hexo-theme-particle',      // The repository of store comments,
-        owner: 'korilin',
-        admin: ['korilin'],
-        language: 'en',
-        id: location.pathname,      // Ensure uniqueness and length less than 50
-        distractionFreeMode: true  // Facebook-like distraction free mode
-    })
-    gitalk.render('gitalk-container')
 </script>
 
 </body>

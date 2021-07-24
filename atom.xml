@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-20T04:27:41.756Z</updated>
+  <updated>2021-07-24T08:02:24.257Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo建站的一些坑</title>
+    <link href="http://example.com/2021/07/24/hexo%E5%BB%BA%E7%AB%99%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/"/>
+    <id>http://example.com/2021/07/24/hexo%E5%BB%BA%E7%AB%99%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/</id>
+    <published>2021-07-24T07:58:50.000Z</published>
+    <updated>2021-07-24T08:02:24.257Z</updated>
+    
+    <content type="html"><![CDATA[<p>这个blog到目前为止还是功能比较单一的，不过用于存储文章，分类笔记已经足够了</p><p>写一点初次建站过程中遇到的坑供大家参考     </p><h2 id="基于partical主题（🔗：https-github-com-korilin-hexo-theme-particle-git）建站遇到的问题："><a href="#基于partical主题（🔗：https-github-com-korilin-hexo-theme-particle-git）建站遇到的问题：" class="headerlink" title="基于partical主题（🔗：https://github.com/korilin/hexo-theme-particle.git）建站遇到的问题："></a>基于partical主题（🔗：<a href="https://github.com/korilin/hexo-theme-particle.git%EF%BC%89%E5%BB%BA%E7%AB%99%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A">https://github.com/korilin/hexo-theme-particle.git）建站遇到的问题：</a></h2><h3 id="如果你完全不知道怎么更换主题"><a href="#如果你完全不知道怎么更换主题" class="headerlink" title="如果你完全不知道怎么更换主题"></a>如果你完全不知道怎么更换主题</h3><h3 id="👉Hexo-修改Hexo主题-简书-jianshu-com"><a href="#👉Hexo-修改Hexo主题-简书-jianshu-com" class="headerlink" title="👉Hexo-修改Hexo主题 - 简书 (jianshu.com)"></a>👉<a href="https://www.jianshu.com/p/33bc0a0a6e90">Hexo-修改Hexo主题 - 简书 (jianshu.com)</a></h3><p>ps：partical主题的代码质量不是很高，内部的包结构以及命名和现在主流的hexo主题相比有点不一样，所以自己进行功能扩展的时候可参考的blog比较少，出错后解决需要的时间比较长，不建议使用该主题。</p><h3 id="你需要知道的："><a href="#你需要知道的：" class="headerlink" title="你需要知道的："></a>你需要知道的：</h3><p>hexo更换主题时素质三连</p><pre><code>hexo clhexo ghexo d/hexo s</code></pre><p>以及更改根目录的_config.yml文件</p><pre><code># 打开_config.yml配置文件，修改以下内容deploy:type: &#39;git&#39;repo: https://github.com/yourname/yourname.github.io.gitbranch: master# 其中的repo修改为repo: git@github.com:yourname/yourname.github.io.git</code></pre><p>🔗<a href="https://blog.csdn.net/qq_49218475/article/details/117334256?utm_term=failedspawn&utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-2-117334256&spm=3001.4430">SpawnFailed错误的几种解决方法_-小豆同学-的博客-CSDN博客</a></p><h3 id="1-该主题下载并直接配置，会发现关于、分类、标签的相对路径不正确，内容无法正确显示"><a href="#1-该主题下载并直接配置，会发现关于、分类、标签的相对路径不正确，内容无法正确显示" class="headerlink" title="1.该主题下载并直接配置，会发现关于、分类、标签的相对路径不正确，内容无法正确显示"></a>1.该主题下载并直接配置，会发现关于、分类、标签的相对路径不正确，内容无法正确显示</h3><p>🔗<a href="https://blog.csdn.net/weixin_42118981/article/details/109462491?utm_term=hexo%E6%A0%87%E7%AD%BE%E4%B8%8D%E6%98%BE%E7%A4%BA&utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-1-109462491&spm=3001.4430">解决hexo下分类和标签无法显示的问题_三十六度五的博客-CSDN博客</a></p><p>$ hexo new page tags（应该是不需要加引号的）</p><p>index.md文件中的tag最好都用英文，不然会因为语言问题出现一些错误导致标签等无法显示（当然也可以把配置文件全部改成中文，然后使用中文标签，并且我觉得中文标签可以美化得更好看，当时有点头秃）</p><h3 id="2-添加文章得阅读数"><a href="#2-添加文章得阅读数" class="headerlink" title="2.添加文章得阅读数"></a>2.添加文章得阅读数</h3><p>我使用的是不算子，比较简单好用</p><p>需要注意的是不算子的网站更改过了，很多blog都是用的之前的网站，配置后浏览量是显示不出来的</p><p>🔗不算子：<a href="http://busuanzi.ibruce.info/">不蒜子 - 极简网页计数器 (ibruce.info)</a></p><h3 id="3-这个主题添加点击效果可以参考的blog"><a href="#3-这个主题添加点击效果可以参考的blog" class="headerlink" title="3.这个主题添加点击效果可以参考的blog"></a>3.这个主题添加点击效果可以参考的blog</h3><p><a href="https://www.jianshu.com/p/ef2d5ee6ac75">Hexo-indigo 主题，添加点击出现小桃心效果 - 简书 (jianshu.com)</a></p><h3 id="4-更改功能时配置好yml文件，enable以及一些变量等等"><a href="#4-更改功能时配置好yml文件，enable以及一些变量等等" class="headerlink" title="4.更改功能时配置好yml文件，enable以及一些变量等等"></a>4.更改功能时配置好yml文件，enable以及一些变量等等</h3><h3 id="5-yml文件里可以对属性进行一些个性化的设置，所谓的调参……"><a href="#5-yml文件里可以对属性进行一些个性化的设置，所谓的调参……" class="headerlink" title="5.yml文件里可以对属性进行一些个性化的设置，所谓的调参……"></a>5.yml文件里可以对属性进行一些个性化的设置，所谓的调参……</h3><h4 id="建站过程中建议参考hexo官方文档-也可以搜索B站教程"><a href="#建站过程中建议参考hexo官方文档-也可以搜索B站教程" class="headerlink" title="建站过程中建议参考hexo官方文档 也可以搜索B站教程"></a>建站过程中建议参考hexo官方文档 也可以搜索B站教程</h4><p>#建站的时候坑还是比较多的，现在只能想起来这一点了555，希望对大家有点点用 </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这个blog到目前为止还是功能比较单一的，不过用于存储文章，分类笔记已经足够了&lt;/p&gt;
+&lt;p&gt;写一点初次建站过程中遇到的坑供大家参考     &lt;/p&gt;
+&lt;h2 id=&quot;基于partical主题（🔗：https-github-com-korilin-hexo-theme-p</summary>
+      
+    
+    
+    
+    
+    <category term="使用hexo+github Pages建站" scheme="http://example.com/tags/%E4%BD%BF%E7%94%A8hexo-github-Pages%E5%BB%BA%E7%AB%99/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
